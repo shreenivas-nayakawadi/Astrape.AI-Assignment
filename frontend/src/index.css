@@ -1,0 +1,109 @@
+@import "tailwindcss";
+
+/* Optional: global resets or custom utilities */
+:root {
+  color-scheme: light dark;
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+/* Container */
+.container {
+  max-width: 80rem; /* ~1280px (like max-w-7xl) */
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem; /* px-4 */
+  padding-right: 1rem;
+}
+
+@media (min-width: 640px) { /* sm */
+  .container {
+    padding-left: 1.5rem; /* px-6 */
+    padding-right: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) { /* lg */
+  .container {
+    padding-left: 2rem; /* px-8 */
+    padding-right: 2rem;
+  }
+}
+
+/* Input */
+.input {
+  width: 100%;
+  border-radius: 0.75rem; /* rounded-xl */
+  border: 1px solid rgb(209 213 219); /* gray-300 */
+  background-color: rgb(255 255 255); /* white */
+  padding: 0.75rem 1rem; /* py-3 px-4 */
+  font-size: 0.875rem; /* text-sm */
+  outline: none;
+  transition: all 0.2s;
+}
+.input:focus {
+  border-color: rgb(17 24 39); /* gray-900 */
+  box-shadow: 0 0 0 2px rgb(17 24 39 / 0.1); /* ring-2 ring-gray-900/10 */
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.75rem; /* rounded-xl */
+  padding: 0.5rem 1rem; /* py-2 px-4 */
+  font-size: 0.875rem; /* text-sm */
+  font-weight: 500; /* font-medium */
+  box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05); /* shadow-sm */
+  transition: all 0.2s;
+}
+
+/* Primary button */
+.btn-primary {
+  background-color: rgb(17 24 39); /* gray-900 */
+  color: rgb(255 255 255); /* white */
+}
+.btn-primary:hover {
+  background-color: rgb(0 0 0); /* black */
+}
+.btn-primary:focus-visible {
+  outline: 2px solid rgb(17 24 39); /* ring-2 */
+  outline-offset: 2px; /* ring-offset-2 */
+}
+
+/* Ghost button */
+.btn-ghost {
+  color: rgb(55 65 81); /* gray-700 */
+}
+.btn-ghost:hover {
+  background-color: rgb(243 244 246); /* gray-100 */
+}
+
+/* Danger button */
+.btn-danger {
+  background-color: rgb(220 38 38); /* red-600 */
+  color: rgb(255 255 255); /* white */
+}
+.btn-danger:hover {
+  background-color: rgb(185 28 28); /* red-700 */
+}
+
+/* Cards */
+.card {
+  border-radius: 1rem; /* rounded-2xl */
+  border: 1px solid rgb(229 231 235); /* gray-200 */
+  background-color: rgb(255 255 255); /* white */
+  box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05); /* shadow-sm */
+}
+
+.card-hover {
+  transition: all 0.2s;
+}
+.card-hover:hover {
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1),
+              0 2px 4px -2px rgb(0 0 0 / 0.1); /* shadow-md */
+  transform: translateY(-2px); /* -translate-y-0.5 */
+}
